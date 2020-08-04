@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Management System</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <div th:insert="fragments/components :: header"></div>
+        <div th:insert="fragments/components :: menu"></div>
+        <div style="height: 10px;"></div>
+        <form th:action="@{/saveCreditCard}" th:object="${creditCard}" method="post">
+            <div class="form-row">
+                <div class="col-lg-6 form-group">
+                    <label>Card Holder Name</label>
+                    <input type="text" class="form-control" th:field="*{cardHolderName}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 form-group">
+                    <label>Credit Card Number</label>
+                    <input type="number" class="form-control" th:field="*{creditCardNumber}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 form-group">
+                    <label>Expiry Date</label>
+                    <input type="month" class="form-control" th:field="*{expiryDate}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 form-group">
+                    <input class="btn btn-success" type = "submit" value = "Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
