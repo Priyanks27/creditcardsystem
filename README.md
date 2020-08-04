@@ -1,6 +1,6 @@
-ReadME
 
-Download the project using git link : 
+
+Download the project using github link.
 Pre-requisites:
 1) Java and JDK must be setup and JAVA_HOME must be added in the path
 
