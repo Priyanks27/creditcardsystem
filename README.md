@@ -25,3 +25,8 @@ Adding user functionality is not linked with the main application yet. Users can
 1) Add users : http://localhost:8081/addUser
 2) Add creidt cards : http://localhost:8081/addCreditCards
 3) Check credit card details: http://localhost:8081/creditcards
+
+Issues:
+Login adds users, but does not validate according to them. Custom validator and password matcher needs to be implemented. Login works using, admin, admin as username and password.
+Form Validations 
+Expiry date while adding credit card does not work in Mozilla, but works in chrome
